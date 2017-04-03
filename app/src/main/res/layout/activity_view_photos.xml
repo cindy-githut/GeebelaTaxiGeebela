@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.ViewPhotos"
+    android:background="#000">
+
+    <!-- ExtendedViewPager is a custom view and must be referred to by its full package name in XML -->
+    <habbitatvalley.com.geebelataxigeebela.adapters.ExtendedViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/black_app_bar">
+    </include>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/streamimage"
+        android:visibility="visible"
+        android:background="@color/gray_100"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:foregroundGravity="center"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="25dp" />
+
+</RelativeLayout>

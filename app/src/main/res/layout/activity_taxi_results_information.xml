@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_taxi_results_information"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.TaxiResultsInformation">
+
+    <include
+        layout="@layout/tool_bar_blue"
+        android:id="@+id/app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_blue"
+        android:id="@+id/textboxes"
+        android:visibility="visible"
+        android:layout_below="@+id/app_bar">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@mipmap/ic_location"
+            android:id="@+id/imageView"
+            android:tint="@color/red"
+            android:layout_alignTop="@+id/fromLocation"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fromLocation"
+            android:textColorHint="@color/text_hint"
+            android:hint="From Location"
+            android:clickable="false"
+            android:enabled="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="23dp"
+            android:background="@drawable/post_card"
+            android:padding="10dp"
+            android:textSize="14dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/destinationLocation"
+            android:textColorHint="@color/text_hint"
+            android:hint="To Location"
+            android:background="@drawable/post_card"
+            android:padding="10dp"
+            android:textSize="14dp"
+            android:clickable="false"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            android:maxLines="1"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="23dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:ellipsize="end" />
+
+        <ImageView
+            android:layout_height="40dp"
+            app:srcCompat="@mipmap/ic_location"
+            android:id="@+id/imageView2"
+            android:layout_width="40dp"
+            android:tint="@color/green"
+            android:layout_alignTop="@+id/destinationLocation"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/abc_ic_menu_overflow_material"
+            android:id="@+id/imageViewp"
+            android:tint="@color/white"
+            android:layout_width="50dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingRight="9dp"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/map"
+        android:layout_below="@+id/textboxes">
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/post_card" >
+
+
+            <TextView
+                android:text="Your requested information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:text="From:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:text="Randburg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/depart"
+                    android:textSize="14dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:text="To:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView8"
+                    android:textStyle="bold"
+                    android:layout_marginRight="8dp"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:text="Pretoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/destination"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/orange"
+                android:layout_marginBottom="20dp"
+                android:layout_height="1dp">
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <TextView
+                    android:text="The Price is:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:textStyle="bold"
+                    android:layout_marginRight="8dp"
+                    android:textSize="14dp"/>
+                <TextView
+                    android:text="R11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPrice"
+                    android:textSize="14dp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/orange"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                >
+
+            </RelativeLayout>
+
+            <TextView
+                android:text="Find the taxi at:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                android:textSize="14dp"
+                android:gravity="center"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_location"
+                    android:id="@+id/imageViewk"
+                    android:tint="@color/green" />
+
+
+                <TextView
+                    android:text="Randburg Taxi Rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/taxiLocation"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageViewk"
+                    android:textSize="14dp"/>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/orange"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                >
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:id="@+id/navigate"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/icon"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/driving"
+                        android:tint="@color/green"
+                        android:layout_marginTop="6dp"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/lbldriving"
+                    android:layout_marginRight="25dp"
+                    android:layout_toRightOf="@+id/icon"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    >
+
+                    <TextView
+                        android:text="8 min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtdrivingDistance"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:text="8 min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtdrivingTime"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="2dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/icon1"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/lbldriving"
+                    android:layout_marginLeft="25dp"
+                    >
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/walking"
+                        android:tint="@color/green"
+                        android:layout_marginTop="6dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/icon1"
+                    android:id="@+id/lblwalking"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp" >
+
+                    <TextView
+                        android:text="20 min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtwalkingDistance"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"/>
+                    <TextView
+                        android:text="20 min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtwalkingTime"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

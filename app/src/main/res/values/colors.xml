@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="green">#47A776</color>
+    <color name="orange">#F4AD49</color>
+    <color name="post_card_border_color">#E0E0E0</color>
+    <color name="base_blue_">#009DD7</color>
+    <color name="base_blue_darker">#0288D1</color>      <!-- 700 -->
+    <color name="base_blue">#0BACD3</color>
+    <color name="main_border_gray">#E0E0E0</color> <!-- #E0E0E0 -->
+    <color name="button_interactivity_bar">#F5F5F5</color>
+    <color name="gray_900">#212121</color>
+    <color name="text_hint_color">#808080</color>
+    <color name="black_overlay">#373737</color>
+    <color name="red">#c31c13</color>
+    <color name="gray_400">#c0c0c0</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="post_text_color">#424242</color>
+    <color name="gray_500">#808080</color>
+    <color name="GrayLight">#d3d3d3</color>
+    <color name="appcolor">#DB5565</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_hint">#E0E0E0</color>
+    <color name="transparent">#80000000</color>
+    <color name="transparentblack">#9000</color>
+</resources>

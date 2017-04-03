@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_border_gray"
+    android:weightSum="1">
+
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/load"
+        android:padding="10dp"
+        android:indeterminateTint="@color/green"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You currently don&apos;t have any friends"
+        android:id="@+id/txtNoFriends"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-light"
+        android:layout_margin="16dp"
+        android:textSize="14sp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/list_friends"
+        android:layout_below="@+id/load"
+        android:layout_height="match_parent" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="center"
+        android:visibility="gone"
+        android:id="@+id/loadingmore"
+        android:background="#D8000000" >
+
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/progressBar4"
+            android:padding="10dp"
+            android:progressTint="@color/white"
+            android:indeterminateTint="@color/white"
+            android:progressTintMode="screen"
+            android:progressBackgroundTint="@color/white"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
